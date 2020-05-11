@@ -11,7 +11,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class AuthorizeModel {
+public class AuthorizationCodeModel {
     private String response_type;
     private String client_id;
     private String scope;

@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org" th:include="/common/pagelayout :: page__layout">
+
+<div class="container" th:fragment="page__content">
+      <form class="form__group" action="http://localhost:8080/accesstoken" method="POST" th:object="${model}">
+            <div class="form__sub__group">
+                  <input type="text" id="code" name="code" class="form-control" placeholder="Authorization Code" required th:field="*{code}">
+            </div>
+            <div class="form__sub__group">
+                  <input type="text" id="grant_type" name="grant_type" class="form-control" placeholder="Grant Type" required th:field="*{grant_type}">
+            </div>
+            <div class="form__sub__group">
+                  <input type="text" id="redirect_uri" name="redirect_uri" class="form-control" placeholder="Redirect uri" required
+                        th:field="*{redirect_uri}">
+            </div>
+            <div class="form__sub__group">
+                  <input type="text" id="client_Id" name="client_Id" class="form-control" placeholder="Client Id" required th:field="*{client_Id}">
+            </div>
+            <div class="form__sub__group">
+                  <input type="password" id="client_secret" name="client_secret" class="form-control" placeholder="Client Secret" required
+                        th:field="*{client_secret}">
+            </div>
+            <div class="form__sub__group">
+                  <button class="btn  btn-primary" type="submit">Get Access Token Code</button>
+                  <button class="btn  btn-warning" type="reset">Reset</button>
+                  <button class="btn  btn-info" type="button" th:onclick="|window.location.href='/'|">Cancel</button>
+            </div>
+      </form>
+</div>
