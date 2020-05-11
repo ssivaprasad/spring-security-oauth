@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="page__layout">
+<head>
+<link rel="stylesheet" href="main.css" th:href="@{/css/main.css}" />
+
+<link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="/webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+</head>
+
+<body>
+      <div class="page__header__container">
+            <div th:replace="/common/fragments :: header__menu">Page Header goes here</div>
+      </div>
+      <div class="page__content__container">
+            <div th:replace="this :: page__content">Page Content goes here</div>
+      </div>
+      <div class="page__footer__container">
+            <div th:replace="/common/fragments :: footer__menu">Page Footer goes here</div>
+      </div>
+</body>

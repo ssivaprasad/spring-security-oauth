@@ -1,0 +1,55 @@
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #eee;
+}
+
+a {
+	text-decoration: none;
+	font-size: larger;
+	margin: 5px;
+	font-weight: bolder;
+}
+
+.form__group {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form__sub__group,  .form__sub__group *{
+	margin: 5px;
+}
+
+.form__group .form__group.heading, .form__group .checkbox {
+	margin-bottom: 10px;
+}
+
+.form__group .checkbox {
+	font-weight: 400;
+}
+
+.form__group .form-control {
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.form__group .form-control:focus {
+	z-index: 2;
+}
+
+.form__group input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.form__group input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
