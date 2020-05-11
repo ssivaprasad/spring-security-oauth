@@ -1,6 +1,8 @@
-<html  xmlns:th="http://www.thymeleaf.org" th:include="/common/pagelayout :: page__layout">
+<html xmlns:th="http://www.thymeleaf.org" th:include="/common/pagelayout :: page__layout">
 
 <div class="container" th:fragment="page__content">
-     <a th:href="@{/authrizationcode}" type="button">GET Oauth Authorization Code</a>
+      <div id="authrization_code_grant">
+            <h3>1. Authorization Code Grant</h3>
+            <a th:href="@{/authrizationcode}" type="button">GET Oauth Authorization Code</a>
+      </div>
 </div>
-      

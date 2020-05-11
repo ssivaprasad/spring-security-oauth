@@ -10,7 +10,7 @@ import com.ssp.apps.oauth.resource.client.dto.AuthorizeModel;
 @Controller
 public class ClientController {
 
-    @RequestMapping("/")
+    @RequestMapping(value = {"/", "/home"})
     public String home() {
         return "home";
     }
@@ -18,19 +18,10 @@ public class ClientController {
     @GetMapping("/authrizationcode")
     public String authrizationcode(ModelMap model,
             @RequestParam(name = "code", required = false) String authorizationCode) {
-        AuthorizeModel authorizationModel = new AuthorizeModel("code", "client_1", "READ",
-                "http://localhost:8080/authrizationcode");
+        AuthorizeModel authorizationModel =
+                new AuthorizeModel("code", "client_1", "READ", "http://localhost:8080/home");
         model.addAttribute("model", authorizationModel);
         return "authrizationcode";
-    }
-
-
-    @GetMapping("/authrizationcode_success")
-    public String authrizationcode_success(ModelMap model,
-            @RequestParam(name = "code") String code) {
-        model.addAttribute("code", code);
-        model.addAttribute("isAuthenticated", true);
-        return "authrizationcode_success";
     }
 
 }

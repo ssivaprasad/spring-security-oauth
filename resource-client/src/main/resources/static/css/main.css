@@ -11,6 +11,9 @@ a {
 	font-weight: bolder;
 }
 
+#authrization_code_grant a{
+	margin-left: 50px
+}
 .form__group {
 	max-width: 330px;
 	padding: 15px;
